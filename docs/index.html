@@ -7,41 +7,52 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <!-- inject css file -->
-  <link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css">
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
 </head>
 <body>
-  <div id="app">加载中...</div>
-
-  <!--引入vue，可以在.md文件中写vue代码 -->
-  <script src="//unpkg.com/vue"></script>
-  <!--引入vue-amap, 可以实现vue高德地图组件-->
-  <script src="//unpkg.com/vue-amap/dist/index.js"></script>
+  <nav>
+    <a href="#/">EN</a>
+    <a href="#/zh-cn/">中文</a>
+  </nav>
+  <div id="app"></div>
   <script>
     window.$docsify = {
-      //封面配置
-      coverpage: true,
-      //侧边栏配置
-      // loadSidebar: true,
-      // alias: {
-      //   '/.*/_sidebar.md': '/_sidebar.md'
-      // },
-      name: '',
-      repo: ''
-    }
-  </script>
+	  repo: 'https://github.com/jerico-tech/jerico-tech.github.io',
+      loadNavbar: true,
+	  coverpage: true,
+	  loadSidebar: false,
+	  logo: '_media/icon.jpg',
+	  name: '技术',
+	  disqus: 'shortname',
+	  search: 'auto', // 默认值
+	  // 完整配置参数
+    search: {
+      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      paths: [], // or 'auto'
+      placeholder: 'Type to search',
 
-  <script>
-    // 初始化高德地图的 key 和插件
-    window.VueAMap.initAMapApiLoader({
-      key: '160cab8ad6c50752175d76e61ef92c50',
-      plugin: ['Autocomplete', 'PlaceSearch', 'Scale', 'OverView', 'ToolBar', 'MapType', 'PolyEditor', 'AMap.CircleEditor'],
-      // 默认高德 sdk 版本为 1.4.4
-      v: '1.4.4'
-    });
+      // 支持本地化
+      placeholder: {
+        '/zh-cn/': '搜索',
+        '/': 'Type to search'
+      },
+
+      noData: 'No Results!',
+
+      // 支持本地化
+      noData: {
+        '/zh-cn/': '找不到结果',
+        '/': 'No Results'
+      },
+
+      // 搜索标题的最大程级, 1 - 6
+      depth: 2
+    }
+	}
   </script>
-  <!--引入vuep，可以在页面中写代码实时看效果-->
-  <script src="//unpkg.com/vuep"></script>
-  <script src="//unpkg.com/docsify"></script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 </body>
 </html>
