@@ -30,17 +30,17 @@
   * [使用插件](zh-cn/plugins.md)
   * [Markdown 配置](zh-cn/markdown.md)
   * [代码高亮](zh-cn/language-highlight.md) 
- 
+
 * OS
   * [CentOS 8](zh-cn/configuration.md)
   * [Linux](os/linux/centos常用操作指南.md)
   * [Windows](zh-cn/plugins.md)
   * [Markdown 配置](zh-cn/markdown.md)
   * [代码高亮](zh-cn/language-highlight.md) 
- 
+
 * Tools
-  * [IDEA](zh-cn/configuration.md)
+  * [IDEA](tools/idea/readme.md)
   * [VS Code](zh-cn/themes.md)
   * [Maven](zh-cn/plugins.md)
-  * [Git](zh-cn/markdown.md)
+  * [Git](tools/git/Git教程.md)
   * [代码高亮](zh-cn/language-highlight.md)
